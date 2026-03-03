@@ -441,7 +441,7 @@ export default function Home() {
                   RAG-powered CLI tool scanning local repositories for security vulnerabilities.
                 </p>
                 <div className={styles.projectTech}>
-                  {['Python', 'Typer', 'Pydantic', 'OpenAI API', 'ChromaDB', 'SQLite', 'FastAPI', 'PyInstaller', 'Node.js'].map((tech) => (
+                  {['Python', 'Typer', 'Pydantic', 'OpenAI API', 'ChromaDB', 'SQLite', 'FastAPI', 'PyInstaller', 'Node.js', 'pytest', 'npm'].map((tech) => (
                     <span key={tech} className={styles.techTag}>{tech}</span>
                   ))}
                 </div>
