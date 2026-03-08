@@ -4,6 +4,25 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { TypeAnimation } from 'react-type-animation';
 import styles from './page.module.css';
+import { projects } from './projects';
+
+function GithubIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+    </svg>
+  );
+}
+
+function GlobeIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="10"></circle>
+      <line x1="2" y1="12" x2="22" y2="12"></line>
+      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+    </svg>
+  );
+}
 
 export default function Home() {
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
@@ -35,7 +54,7 @@ export default function Home() {
             />
           </h1>
           <p className={styles.heroDescription}>
-            I'm a high school senior from New Jersey, interested in applied ML, low-latency infrastructure, & distributed systems.
+            I&apos;m a high school senior from New Jersey, interested in applied ML, low-latency infrastructure, & distributed systems.
           </p>
         </section>
 
@@ -83,7 +102,7 @@ export default function Home() {
               {expandedItems.has('work-4') && (
                 <div className={styles.itemDetails}>
                   <p className={styles.itemDescription}>
-                    Students learning from alumni who've been there.
+                    Students learning from alumni who&apos;ve been there.
                   </p>
                   <a href="https://thealumhub.com" target="_blank" rel="noopener noreferrer" className={styles.arxivLink}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -356,105 +375,52 @@ export default function Home() {
           <div className={styles.projectsTag}>Featured Projects</div>
 
           <div className={styles.projectsGrid}>
-            <div className={styles.projectCard}>
-              <div className={styles.projectContent}>
-                <div className={styles.projectHeader}>
-                  <h3 className={styles.projectTitle}>AutoAdv</h3>
-                </div>
-                <p className={styles.projectDescription}>
-                  Multi-turn pipeline for automated generation of adversarial prompts for jailbreaking LLMs.
-                </p>
-                <div className={styles.projectTech}>
-                  {['Python', 'OpenAI API', 'Together AI API', 'xAI API'].map((tech) => (
-                    <span key={tech} className={styles.techTag}>{tech}</span>
-                  ))}
-                </div>
-                <div className={styles.projectLinks}>
-                  <a href="https://github.com/AAN-AutoAdv/AutoAdv" target="_blank" rel="noopener noreferrer" className={styles.projectLink}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                    Source
-                  </a>
-                </div>
-              </div>
-            </div>
+            {projects.map((project) => (
+              <div key={project.title} className={styles.projectCard}>
+                <div className={styles.projectContent}>
+                  <div className={styles.projectHeader}>
+                    <h3 className={styles.projectTitle}>{project.title}</h3>
+                  </div>
+                  <p className={styles.projectDescription}>{project.description}</p>
+                  <div className={styles.projectTech}>
+                    {project.tech.map((tech) => (
+                      <span key={`${project.title}-${tech}`} className={styles.techTag}>{tech}</span>
+                    ))}
+                  </div>
+                  <div className={styles.projectLinks}>
+                    {project.actions.map((action) => {
+                      const icon = action.kind === 'source' ? <GithubIcon /> : <GlobeIcon />;
 
-            <div className={styles.projectCard}>
-              <div className={styles.projectContent}>
-                <div className={styles.projectHeader}>
-                  <h3 className={styles.projectTitle}>Alumhub</h3>
-                </div>
-                <p className={styles.projectDescription}>
-                  Full-stack platform connecting alumni and students within high school communities.
-                </p>
-                <div className={styles.projectTech}>
-                  {['Javascript', 'CSS', 'React', 'Next.js', 'Node.js', 'Firebase', 'Stripe'].map((tech) => (
-                    <span key={tech} className={styles.techTag}>{tech}</span>
-                  ))}
-                </div>
-                <div className={styles.projectLinks}>
-                  <a href="https://thealumhub.com" target="_blank" rel="noopener noreferrer" className={styles.projectLink}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="12" cy="12" r="10"></circle>
-                      <line x1="2" y1="12" x2="22" y2="12"></line>
-                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                    </svg>
-                    Website
-                  </a>
-                </div>
-              </div>
-            </div>
+                      if (!action.href) {
+                        return (
+                          <span
+                            key={`${project.title}-${action.kind}-${action.label}`}
+                            className={styles.projectLinkDisabled}
+                            aria-disabled="true"
+                          >
+                            {icon}
+                            {action.label}
+                          </span>
+                        );
+                      }
 
-            <div className={styles.projectCard}>
-              <div className={styles.projectContent}>
-                <div className={styles.projectHeader}>
-                  <h3 className={styles.projectTitle}>Yu&apos;s Elite Education</h3>
-                </div>
-                <p className={styles.projectDescription}>
-                  After-school tutoring website with custom forms and administrator management.
-                </p>
-                <div className={styles.projectTech}>
-                  {['TypeScript', 'Tailwind CSS', 'React', 'Next.js', 'Node.js', 'PostgreSQL', 'Neon', 'Prisma'].map((tech) => (
-                    <span key={tech} className={styles.techTag}>{tech}</span>
-                  ))}
-                </div>
-                <div className={styles.projectLinks}>
-                  <a href="https://yuselite.education" target="_blank" rel="noopener noreferrer" className={styles.projectLink}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="12" cy="12" r="10"></circle>
-                      <line x1="2" y1="12" x2="22" y2="12"></line>
-                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                    </svg>
-                    Website
-                  </a>
+                      return (
+                        <a
+                          key={`${project.title}-${action.kind}-${action.label}`}
+                          href={action.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={styles.projectLink}
+                        >
+                          {icon}
+                          {action.label}
+                        </a>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div className={styles.projectCard}>
-              <div className={styles.projectContent}>
-                <div className={styles.projectHeader}>
-                  <h3 className={styles.projectTitle}>AUDIT</h3>
-                </div>
-                <p className={styles.projectDescription}>
-                  RAG-powered CLI tool scanning local repositories for security vulnerabilities.
-                </p>
-                <div className={styles.projectTech}>
-                  {['Python', 'Typer', 'Pydantic', 'OpenAI API', 'ChromaDB', 'SQLite', 'FastAPI', 'Node.js', 'npm'].map((tech) => (
-                    <span key={tech} className={styles.techTag}>{tech}</span>
-                  ))}
-                </div>
-                <div className={styles.projectLinks}>
-                  <a href="https://github.com/AryaVaidya08/AUDIT" target="_blank" rel="noopener noreferrer" className={styles.projectLink}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                    Source
-                  </a>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </section>
 

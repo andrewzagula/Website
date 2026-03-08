@@ -386,17 +386,21 @@
   flex-wrap: wrap;
 }
 
-.projectLink {
+.projectLink,
+.projectLinkDisabled {
   display: flex;
   align-items: center;
   gap: 6px;
-  background-color: #000000;
-  color: white;
   padding: 8px 16px;
   border-radius: 8px;
-  text-decoration: none;
   font-size: 14px;
   font-weight: 500;
+}
+
+.projectLink {
+  background-color: #000000;
+  color: white;
+  text-decoration: none;
   transition: background-color 0.2s;
 }
 
@@ -404,7 +408,15 @@
   background-color: #1a1a1a;
 }
 
-.projectLink svg {
+.projectLinkDisabled {
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  border: 1px solid #e5e7eb;
+  cursor: not-allowed;
+}
+
+.projectLink svg,
+.projectLinkDisabled svg {
   width: 16px;
   height: 16px;
   flex-shrink: 0;
