@@ -38,7 +38,7 @@ export const projects: Project[] = [
   },
   {
     title: 'AutoAdv',
-    description: 'Multi-turn pipeline for automated generation of adversarial prompts for jailbreaking LLMs.',
+    description: 'Automated adversarial prompting pipeline for multi-turn LLM jailbreaking.',
     tech: ['Python', 'OpenAI API', 'Together AI API', 'xAI API'],
     actions: [
       { kind: 'source', label: 'Source', href: 'https://github.com/AAN-AutoAdv/AutoAdv' },

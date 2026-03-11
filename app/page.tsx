@@ -78,7 +78,7 @@ export default function Home() {
                 <div className={styles.itemContent}>
                   <div>
                     <h3 className={styles.itemTitle}>Alumhub</h3>
-                    <p className={styles.itemSubtitle}>Co-Founder</p>
+                    <p className={styles.itemSubtitle}>Co-Founder & CEO</p>
                   </div>
                   <div className={styles.itemRight}>
                     <span className={styles.itemDate}>Jan 2025 - Present</span>
@@ -102,7 +102,7 @@ export default function Home() {
               {expandedItems.has('work-4') && (
                 <div className={styles.itemDetails}>
                   <p className={styles.itemDescription}>
-                    Students learning from alumni who&apos;ve been there.
+                    Student-alumni social networking platform
                   </p>
                   <a href="https://thealumhub.com" target="_blank" rel="noopener noreferrer" className={styles.arxivLink}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -132,7 +132,7 @@ export default function Home() {
                 <div className={styles.itemContent}>
                   <div>
                     <h3 className={styles.itemTitle}>University of California, Berkeley</h3>
-                    <p className={styles.itemSubtitle}>Researcher</p>
+                    <p className={styles.itemSubtitle}>Student Researcher</p>
                   </div>
                   <div className={styles.itemRight}>
                     <span className={styles.itemDate}>Jul 2024 - Dec 2025</span>
@@ -156,7 +156,7 @@ export default function Home() {
               {expandedItems.has('work-2') && (
                 <div className={styles.itemDetails}>
                   <p className={styles.itemDescription}>
-                    Automated adversarial prompting for multi-turn LLM jailbreaking; first-author @ NeurIPS 2025 Lock-LLM Workshop
+                    Automated adversarial prompting pipeline for multi-turn LLM jailbreaking; first-author @ NeurIPS 2025 Lock-LLM
                   </p>
                   <a href="https://arxiv.org/abs/2511.02376" target="_blank" rel="noopener noreferrer" className={styles.arxivLink}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -210,7 +210,7 @@ export default function Home() {
               {expandedItems.has('work-1') && (
                 <div className={styles.itemDetails}>
                   <p className={styles.itemDescription}>
-                    Pre-training & benchmarking sample-efficient vision foundation models; co-author @ IEEE CVPR 2026
+                    Developmentally inspired framework for sample-efficient vision-language learning; co-author @ CVPR 2026
                   </p>
                   <a href="https://arxiv.org/abs/2512.10932" target="_blank" rel="noopener noreferrer" className={styles.arxivLink}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -264,7 +264,7 @@ export default function Home() {
               {expandedItems.has('work-3') && (
                 <div className={styles.itemDetails}>
                   <p className={styles.itemDescription}>
-                    AI-assisted software analytics for educational technology
+                    AI-assisted framework for computer science education
                   </p>
                   <a href="https://arxiv.org/abs/2510.03998" target="_blank" rel="noopener noreferrer" className={styles.arxivLink}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -325,9 +325,11 @@ export default function Home() {
               {expandedItems.has('edu-2') && (
                 <div className={styles.itemDetails}>
                   <p className={styles.itemDescription}>
-                    GPA: 5.0; SAT: 1570; Varsity Volleyball (Captain); Key Club (President); DECA (President)
+                    GPA: 5.0; SAT: 1570
                     <br /><br />
-                    Notable coursework: CS112 (Data Structures) @ Rutgers University, AP Computer Science A, AP Calculus BC, Calculus III, Differential Equations, Intro to Linear Algebra, AP Statistics, AP Physics C, AP Biology, AP Chemistry
+                    Boys' Varsity Volleyball (Captain); DECA Club (President); Key Club (President) 
+                    <br /><br />
+                    Coursework: Calculus III, Differential Equations, Linear Algebra, AP Calculus BC, AP Physics C, AP Chemistry, AP Biology, AP Computer Science A, Data Structures (Rutgers University)
                   </p>
                 </div>
               )}
