@@ -224,59 +224,6 @@ export default function Home() {
               )}
             </div>
 
-            <div className={styles.itemContainer}>
-              <div className={styles.item} onClick={() => toggleItem('work-3')}>
-                <div className={styles.itemLogo}>
-                  <Image 
-                    src="/FLC.png" 
-                    alt="Felician University" 
-                    width={56} 
-                    height={56} 
-                    className={styles.itemLogoImage}
-                    quality={100}
-                    unoptimized
-                  />
-                </div>
-                <div className={styles.itemContent}>
-                  <div>
-                    <h3 className={styles.itemTitle}>Felician University</h3>
-                    <p className={styles.itemSubtitle}>Research Assistant</p>
-                  </div>
-                  <div className={styles.itemRight}>
-                    <span className={styles.itemDate}>May 2024 - Sep 2025</span>
-                    <svg 
-                      className={`${styles.chevron} ${expandedItems.has('work-3') ? styles.chevronExpanded : ''}`}
-                      xmlns="http://www.w3.org/2000/svg" 
-                      width="20" 
-                      height="20" 
-                      viewBox="0 0 24 24" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      strokeWidth="2" 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round"
-                    >
-                      <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              {expandedItems.has('work-3') && (
-                <div className={styles.itemDetails}>
-                  <p className={styles.itemDescription}>
-                    AI-assisted framework for computer science education
-                  </p>
-                  <a href="https://arxiv.org/abs/2510.03998" target="_blank" rel="noopener noreferrer" className={styles.arxivLink}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                      <polyline points="15 3 21 3 21 9"></polyline>
-                      <line x1="10" y1="14" x2="21" y2="3"></line>
-                    </svg>
-                    arXiv
-                  </a>
-                </div>
-              )}
-            </div>
           </div>
         </section>
 
