@@ -78,7 +78,7 @@ export default function Home() {
                 <div className={styles.itemContent}>
                   <div>
                     <h3 className={styles.itemTitle}>Alumhub</h3>
-                    <p className={styles.itemSubtitle}>Co-Founder & CEO</p>
+                    <p className={styles.itemSubtitle}>Co-Founder</p>
                   </div>
                   <div className={styles.itemRight}>
                     <span className={styles.itemDate}>Jan 2025 - Present</span>
@@ -102,7 +102,7 @@ export default function Home() {
               {expandedItems.has('work-4') && (
                 <div className={styles.itemDetails}>
                   <p className={styles.itemDescription}>
-                    Student-alumni social networking platform; $25k+ from Google, Vercel, Amazon, Notion & more
+                    Student-alumni social networking platform; $25k+ from Google, Vercel, Amazon, Notion, Microsoft, Datadog, & more
                   </p>
                   <a href="https://thealumhub.com" target="_blank" rel="noopener noreferrer" className={styles.arxivLink}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
