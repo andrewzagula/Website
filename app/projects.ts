@@ -15,7 +15,7 @@ export const projects: Project[] = [
   {
     title: 'PaperTrail',
     description: 'Agentic AI research assistant exploring arXiv to answer and implement research questions',
-    tech: ['Python', 'TypeScript', 'FastAPI', 'Next.js', 'React', 'OpenAI API', 'LangGraph', 'LangChain', 'ChromaDB', 'SQLite', 'SQLAlchemy', 'Tailwind CSS', 'Pydantic'],
+    tech: ['Python', 'TypeScript', 'FastAPI', 'Next.js', 'React', 'OpenAI API', 'LangChain', 'LangGraph', 'SQLite', 'SQLAlchemy', 'ChromaDB', 'Tailwind CSS', 'Pydantic'],
     actions: [
       { kind: 'source', label: 'Source', href: 'https://github.com/andrewzagula/PaperTrail' },
     ],
@@ -39,7 +39,7 @@ export const projects: Project[] = [
   {
     title: 'AUDIT',
     description: 'RAG-powered CLI tool scanning local repositories for security vulnerabilities',
-    tech: ['Python', 'Typer', 'Pydantic', 'OpenAI API', 'SQLite', 'ChromaDB', 'PyInstaller', 'Node.js', 'npm'],
+    tech: ['Python', 'OpenAI API', 'Typer', 'Pydantic', 'SQLite', 'ChromaDB', 'PyInstaller', 'Node.js'],
     actions: [
       { kind: 'source', label: 'Source', href: 'https://github.com/AryaVaidya08/AUDIT' },
     ],
