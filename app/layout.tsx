@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { DM_Sans } from "next/font/google";
+import { Manrope } from "next/font/google";
 import "./globals.css";
 
-const dmSans = DM_Sans({ subsets: ["latin"], weight: ["400", "500", "700", "800"] });
+const manrope = Manrope({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Andrew Zagula",
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="light" style={{ colorScheme: 'light' }}>
-      <body className={`${dmSans.className} bg-white text-gray-900 antialiased`} style={{ backgroundColor: '#ffffff' }}>
+      <body className={`${manrope.className} bg-white text-gray-900 antialiased`} style={{ backgroundColor: '#ffffff' }}>
         {children}
       </body>
     </html>

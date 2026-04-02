@@ -8,7 +8,6 @@ import {
   FaGithub,
   FaInstagram,
   FaLinkedin,
-  FaXTwitter,
 } from 'react-icons/fa6';
 import { LuGlobe } from 'react-icons/lu';
 import { TypeAnimation } from 'react-type-animation';
@@ -57,14 +56,14 @@ export default function Home() {
               <span className={styles.heroSocialLabel}>Email</span>
             </a>
             <a
-              href="https://www.linkedin.com/in/andrewzagula/"
+              href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.heroSocialLink}
-              aria-label="LinkedIn"
+              aria-label="Resume"
             >
-              <FaLinkedin className={styles.heroSocialIcon} />
-              <span className={styles.heroSocialLabel}>LinkedIn</span>
+              <FaFileLines className={styles.heroSocialIcon} />
+              <span className={styles.heroSocialLabel}>Resume</span>
             </a>
             <a
               href="https://github.com/andrewzagula"
@@ -77,14 +76,14 @@ export default function Home() {
               <span className={styles.heroSocialLabel}>GitHub</span>
             </a>
             <a
-              href="https://x.com/andrewzagula"
+              href="https://www.linkedin.com/in/andrewzagula/"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.heroSocialLink}
-              aria-label="X"
+              aria-label="LinkedIn"
             >
-              <FaXTwitter className={styles.heroSocialIcon} />
-              <span className={styles.heroSocialLabel}>X</span>
+              <FaLinkedin className={styles.heroSocialIcon} />
+              <span className={styles.heroSocialLabel}>LinkedIn</span>
             </a>
             <a
               href="https://www.instagram.com/andrewzagulaa/"
@@ -95,16 +94,6 @@ export default function Home() {
             >
               <FaInstagram className={styles.heroSocialIcon} />
               <span className={styles.heroSocialLabel}>Instagram</span>
-            </a>
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.heroSocialLink}
-              aria-label="Resume"
-            >
-              <FaFileLines className={styles.heroSocialIcon} />
-              <span className={styles.heroSocialLabel}>Resume</span>
             </a>
           </div>
         </section>
@@ -153,7 +142,7 @@ export default function Home() {
               {expandedItems.has('work-4') && (
                 <div className={styles.itemDetails}>
                   <p className={styles.itemDescription}>
-                    Student-alumni social networking platform; $50+ from Google, Vercel, Amazon, Notion, Microsoft, Datadog, & more
+                    Student-alumni social networking platform; $50K+ from Google, Vercel, Amazon, Notion, Microsoft, Datadog, & more
                   </p>
                   <a href="https://thealumhub.com" target="_blank" rel="noopener noreferrer" className={styles.arxivLink}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -387,7 +376,7 @@ export default function Home() {
         </section>
 
         <section className={styles.sectionLarge}>
-          <div className={styles.projectsTag}>Featured Projects</div>
+          <h2 className={styles.sectionTitleLarge}>Projects</h2>
 
           <div className={styles.projectsGrid}>
             {projects.map((project) => (
