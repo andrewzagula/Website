@@ -346,7 +346,7 @@ export default function Home() {
                     <p className={styles.itemSubtitle}>139.5 AMC 12; 13 AIME</p>
                   </div>
                   <div className={styles.itemRight}>
-                    <span className={styles.itemDate}>Mar 2025 - Feb 2026</span>
+                    <span className={styles.itemDate}>2025 - 2026</span>
                   </div>
                 </div>
               </div>
@@ -362,7 +362,7 @@ export default function Home() {
                     <p className={styles.itemSubtitle}>1x Distinguished Honor Roll (top 1%); 4x Honor Roll (top 5%)</p>
                   </div>
                   <div className={styles.itemRight}>
-                    <span className={styles.itemDate}>2021-2025</span>
+                    <span className={styles.itemDate}>2021 - 2025</span>
                   </div>
                 </div>
               </div>
