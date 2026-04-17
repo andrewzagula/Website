@@ -56,7 +56,7 @@ export default function Home() {
               <span className={styles.heroSocialLabel}>Email</span>
             </a>
             <a
-              href="/resume.pdf"
+              href="/Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.heroSocialLink}
