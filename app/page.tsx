@@ -399,7 +399,7 @@ export default function Home() {
               <div className={styles.item}>
                 <div className={styles.itemContent}>
                   <div>
-                    <h3 className={styles.itemTitle}>USACO Gold</h3>
+                    <h3 className={styles.itemTitle}>USA Computing Olympiad Gold</h3>
                   </div>
                   <div className={styles.itemRight}>
                     <span className={styles.itemDate}>Dec 2023</span>
