@@ -56,9 +56,9 @@ export const projects: Project[] = [
   {
     title: 'AUDIT',
     description: 'Vulnerability scanner for codebases',
-    tech: ['Python', 'Typer', 'OpenAI API', 'ChromaDB', 'SQLite', 'PyInstaller', 'npm'],
+    tech: ['Python', 'Typer', 'OpenAI API', 'SQLite', 'PyInstaller', 'npm'],
     actions: [
-      { kind: 'source', label: 'Source', href: 'https://github.com/AryaVaidya08/AUDIT' },
+      { kind: 'source', label: 'Source', href: 'https://github.com/andrewzagula/AUDIT' },
     ],
   },
 ];
